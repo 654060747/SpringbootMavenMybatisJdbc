@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.mapper.DaoMapperImp">
+
+    <resultMap id="daoMap" type="com.example.demo.pojo.DaoUser">
+        <id property="id" column="id" jdbcType="VARCHAR"></id>
+        <result property="nickname" column="xxxx" jdbcType="VARCHAR"></result>
+        <result property="password" column="password" jdbcType="VARCHAR"></result>
+        <result property="first_name" column="first_name" jdbcType="VARCHAR"></result>
+        <result property="last_name" column="last_name" jdbcType="VARCHAR"></result>
+    </resultMap>
+
+<!--    <sql id="allField">id-->
+<!--    ,nickname,password,first_name,last_name</sql>-->
+<!--    <select id="queryAll" resultMap="daoMap">-->
+<!--        select-->
+<!--        <include refid="allField"/>-->
+<!--        from user-->
+<!--    </select>-->
+    <!--    或者-->
+        <select id="queryAll" resultMap="daoMap">
+            select * from user
+        </select>
+
+</mapper>
